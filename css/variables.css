@@ -1,0 +1,148 @@
+/* CSS Custom Properties untuk Spotify + Liquid Glass Theme */
+
+:root {
+    /* Elegant Monochrome White/Silver Color Palette */
+    --bg-primary: #121212;
+    --bg-secondary: rgba(18, 18, 18, 0.8);
+    --bg-tertiary: rgba(40, 40, 40, 0.6);
+    --bg-glass: rgba(255, 255, 255, 0.1);
+    --bg-glass-hover: rgba(255, 255, 255, 0.15);
+    
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --text-muted: #6a6a6a;
+    --text-disabled: #404040;
+    
+    --accent-primary: #e5e5e5;    /* Silver */
+    --accent-secondary: #ffffff;  /* White */
+    --accent-tertiary: #c0c0c0;   /* Light Silver */
+    --accent-glass: rgba(229, 229, 229, 0.2);
+    
+    --success: #1db954;
+    --warning: #ff9500;
+    --error: #e22134;
+    --info: #0d72ea;
+    
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-light: rgba(255, 255, 255, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --shadow-glass: rgba(0, 0, 0, 0.3);
+    
+    /* Liquid Glass Effects */
+    --glass-blur: 20px;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-backdrop: blur(20px) saturate(180%);
+    
+    /* Typography */
+    --font-family-primary: 'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 2rem;      /* 32px */
+    
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* Spacing */
+    --space-xs: 0.25rem;   /* 4px */
+    --space-sm: 0.5rem;    /* 8px */
+    --space-md: 1rem;      /* 16px */
+    --space-lg: 1.5rem;    /* 24px */
+    --space-xl: 2rem;      /* 32px */
+    --space-2xl: 3rem;     /* 48px */
+    --space-3xl: 4rem;     /* 64px */
+    
+    /* Layout */
+    --sidebar-width: 280px;
+    --sidebar-width-collapsed: 72px;
+    --header-height: 64px;
+    --player-height: 90px;
+    
+    --container-max-width: 1400px;
+    --content-padding: var(--space-lg);
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 var(--shadow-color);
+    --shadow-md: 0 4px 6px -1px var(--shadow-color);
+    --shadow-lg: 0 10px 15px -3px var(--shadow-color);
+    --shadow-xl: 0 20px 25px -5px var(--shadow-color);
+    --shadow-2xl: 0 25px 50px -12px var(--shadow-color);
+    
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Z-index layers */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+    
+    /* Audio Player Specific */
+    --player-bg: rgba(18, 18, 18, 0.95);
+    --player-border: var(--border-color);
+    --progress-bg: rgba(255, 255, 255, 0.3);
+    --progress-fill: var(--accent-primary);
+    --control-size: 32px;
+    --control-size-large: 56px;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #e5e5e5 0%, #ffffff 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+/* Dark theme enhancements */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #000000;
+        --bg-secondary: rgba(0, 0, 0, 0.8);
+        --shadow-color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --bg-primary: #000000;
+        --bg-secondary: #111111;
+        --text-primary: #ffffff;
+        --accent-primary: #00ff00;
+        --border-color: #ffffff;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0ms;
+        --transition-normal: 0ms;
+        --transition-slow: 0ms;
+    }
+}

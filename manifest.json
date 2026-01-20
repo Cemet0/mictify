@@ -1,0 +1,82 @@
+{
+    "name": "Mictify - Music Streaming",
+    "short_name": "Mictify",
+    "description": "Modern music streaming app with background playback support",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#1db954",
+    "orientation": "portrait-primary",
+    "categories": ["music", "entertainment"],
+    "lang": "en",
+    "dir": "ltr",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "assets/favicon.ico",
+            "sizes": "48x48",
+            "type": "image/x-icon",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/favicon.ico",
+            "sizes": "96x96",
+            "type": "image/x-icon",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/favicon.ico",
+            "sizes": "144x144",
+            "type": "image/x-icon",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/favicon.ico",
+            "sizes": "192x192",
+            "type": "image/x-icon",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/favicon.ico",
+            "sizes": "512x512",
+            "type": "image/x-icon",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Breakbeat Playlist",
+            "short_name": "Breakbeat",
+            "description": "Open Breakbeat playlist",
+            "url": "/?playlist=breakbeat",
+            "icons": [
+                {
+                    "src": "assets/img/breakbeatProfil.jpg",
+                    "sizes": "96x96",
+                    "type": "image/jpeg"
+                }
+            ]
+        },
+        {
+            "name": "For Revenge Playlist",
+            "short_name": "For Revenge", 
+            "description": "Open For Revenge playlist",
+            "url": "/?playlist=for-revenge",
+            "icons": [
+                {
+                    "src": "assets/img/profilRevenge.jpg",
+                    "sizes": "96x96",
+                    "type": "image/jpeg"
+                }
+            ]
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "assets/img/breakbeatProfil.jpg",
+            "sizes": "540x720",
+            "type": "image/jpeg",
+            "form_factor": "narrow"
+        }
+    ]
+}

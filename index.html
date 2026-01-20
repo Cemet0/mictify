@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mictify</title>
+    <meta name="description" content="Stream your favorite music with Mictify - Modern music player">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1db954">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mictify">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css?v=20250119170000">
+    <link rel="stylesheet" href="css/variables.css?v=20250119170000">
+    <link rel="stylesheet" href="css/main.css?v=20250119170000">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" fill="#1db954"/>
+                        <circle cx="10" cy="17" r="2" fill="#ffffff"/>
+                    </svg>
+                    <span class="logo-text">Mictify</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search playlists..." class="search-input">
+                    <button id="installBtn" class="install-btn" style="display: none;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Install App
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Playlist Categories View -->
+            <section id="playlist-categories" class="section">
+                <div class="section-header">
+                    <h1>Discover Music</h1>
+                    <p>Choose your vibe and start the journey</p>
+                </div>
+                
+                <div class="playlist-grid">
+                    <!-- Breakbeat Playlist -->
+                    <div class="playlist-card" data-playlist="breakbeat" onclick="openPlaylist('breakbeat')">
+                        <div class="playlist-cover">
+                            <img src="assets/img/breakbeatProfil.jpg" alt="Breakbeat" class="playlist-image">
+                        </div>
+                        <div class="playlist-info">
+                            <h3 class="playlist-title">Breakbeat</h3>
+                            <p class="playlist-subtitle"><span id="breakbeatCount">0</span> songs</p>
+                        </div>
+                    </div>
+                    
+                    <!-- For Revenge Playlist -->
+                    <div class="playlist-card" data-playlist="for-revenge" onclick="openPlaylist('for-revenge')">
+                        <div class="playlist-cover">
+                            <img src="assets/img/profilRevenge.jpg" alt="For Revenge" class="playlist-image">
+                        </div>
+                        <div class="playlist-info">
+                            <h3 class="playlist-title">For Revenge</h3>
+                            <p class="playlist-subtitle"><span id="for-revengeCount">0</span> songs</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Playlist Detail View -->
+            <section id="playlist-detail" class="section hidden">
+                <div class="section-header">
+                    <button class="back-btn" onclick="backToPlaylists()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Back
+                    </button>
+                    <div class="playlist-detail-header">
+                        <div class="playlist-header">
+                            <div class="playlist-cover-small">
+                                <img id="currentPlaylistImage" src="assets/img/breakbeatProfil.jpg" alt="Playlist" class="playlist-image-small">
+                            </div>
+                            <div class="playlist-header-info">
+                                <h2 id="currentPlaylistTitle">Breakbeat</h2>
+                                <p id="currentPlaylistSubtitle">0 songs</p>
+                            </div>
+                        </div>
+                        <div class="playlist-actions">
+                            <button class="playlist-play-btn" id="playlistPlayBtn" onclick="playPlaylist()">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <button class="playlist-shuffle-btn" id="playlistShuffleBtn" onclick="shuffleAndPlay()">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="track-list" id="trackList">
+                    <!-- Tracks will be rendered here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Audio Player -->
+        <footer class="player" id="player">
+            <div class="player-content">
+                <!-- Track Info -->
+                <div class="track-info">
+                    <div class="track-artwork">
+                        <div class="artwork-placeholder">🎵</div>
+                    </div>
+                    <div class="track-details">
+                        <div class="track-title" id="currentTitle">Select a song</div>
+                        <div class="track-artist" id="currentArtist">No artist</div>
+                    </div>
+                </div>
+
+                <!-- Player Controls Center -->
+                <div class="player-center">
+                    <div class="player-controls">
+                        <button class="control-btn" id="shuffleBtn" title="Shuffle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="control-btn" id="prevBtn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 20L9 12l10-8v16zM5 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="control-btn play-btn" id="playBtn">
+                            <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M8 5v14l11-7z" fill="currentColor"/>
+                            </svg>
+                            <svg class="pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" style="display: none;">
+                                <path d="M6 19h4V5H6v14zM14 5v14h4V5h-4z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="control-btn" id="nextBtn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 4l10 8-10 8V4zM19 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="control-btn" id="repeatBtn" title="Repeat">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <span class="time-display" id="currentTime">0:00</span>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="time-display" id="totalTime">0:00</span>
+                    </div>
+                </div>
+
+                <!-- Volume Control -->
+                <div class="volume-control">
+                    <button class="control-btn" id="muteBtn">
+                        <svg class="volume-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93l-1.41 1.41A8.96 8.96 0 0 1 20 12a8.96 8.96 0 0 1-2.34 5.66l1.41 1.41A10.96 10.96 0 0 0 22 12a10.96 10.96 0 0 0-2.93-7.07zM16.24 7.76l-1.41 1.41A4.98 4.98 0 0 1 16 12a4.98 4.98 0 0 1-1.17 2.83l1.41 1.41A6.98 6.98 0 0 0 18 12a6.98 6.98 0 0 0-1.76-4.24z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+                </div>
+            </div>
+        </footer>
+
+        <!-- Notifications -->
+        <div id="notifications" class="notifications"></div>
+        
+        <!-- Mobile Player -->
+        <div id="mobilePlayer" class="mobile-player" onclick="openFullscreenPlayer()">
+            <div class="mobile-player-content">
+                <div class="mobile-track-info">
+                    <div class="mobile-artwork">🎵</div>
+                    <div class="mobile-text">
+                        <div class="mobile-title" id="mobileTitle">Select a song</div>
+                        <div class="mobile-artist" id="mobileArtist">No artist</div>
+                    </div>
+                </div>
+                <div class="mobile-controls">
+                    <button class="mobile-btn" id="mobilePrev" onclick="event.stopPropagation()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 20L9 12l10-8v16zM5 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="mobile-btn mobile-play" id="mobilePlay" onclick="event.stopPropagation()">
+                        <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M8 5v14l11-7z" fill="currentColor"/>
+                        </svg>
+                        <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" style="display: none;">
+                            <path d="M6 19h4V5H6v14zM14 5v14h4V5h-4z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button class="mobile-btn" id="mobileNext" onclick="event.stopPropagation()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 4l10 8-10 8V4zM19 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fullscreen Mobile Player -->
+        <div id="fullscreenPlayer" class="fullscreen-player">
+            <div class="fullscreen-background"></div>
+            <div class="fullscreen-content">
+                <!-- Header -->
+                <div class="fullscreen-header">
+                    <button class="fullscreen-close" onclick="closeFullscreenPlayer()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="fullscreen-playlist-info">
+                        <div class="playlist-source">MEMAINKAN DARI PLAYLIST</div>
+                        <div class="playlist-name" id="fullscreenPlaylistName">Breakbeat</div>
+                    </div>
+                    <button class="fullscreen-menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                            <circle cx="12" cy="5" r="1" fill="currentColor"/>
+                            <circle cx="12" cy="19" r="1" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Album Art -->
+                <div class="fullscreen-artwork">
+                    <div class="artwork-container">
+                        <div class="artwork-image" id="fullscreenArtwork">
+                            <img id="fullscreenAlbumImage" src="assets/img/breakbeatProfil.jpg" alt="Album Art">
+                        </div>
+                        <div class="artwork-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Track Info -->
+                <div class="fullscreen-track-info">
+                    <div class="track-title-large" id="fullscreenTrackTitle">Select a song</div>
+                    <div class="track-artist-large" id="fullscreenTrackArtist">No artist</div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="fullscreen-progress">
+                    <div class="progress-bar-large" id="fullscreenProgressBar">
+                        <div class="progress-fill-large" id="fullscreenProgressFill"></div>
+                        <div class="progress-thumb" id="fullscreenProgressThumb"></div>
+                    </div>
+                    <div class="progress-times">
+                        <span id="fullscreenCurrentTime">0:00</span>
+                        <span id="fullscreenTotalTime">0:00</span>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="fullscreen-controls">
+                    <button class="fullscreen-control-btn shuffle-btn" id="fullscreenShuffle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="fullscreen-control-btn" id="fullscreenPrev">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 20L9 12l10-8v16zM5 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="fullscreen-play-btn" id="fullscreenPlayBtn">
+                        <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M8 5v14l11-7z" fill="currentColor"/>
+                        </svg>
+                        <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" style="display: none;">
+                            <path d="M6 19h4V5H6v14zM14 5v14h4V5h-4z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="fullscreen-control-btn" id="fullscreenNext">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 4l10 8-10 8V4zM19 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="fullscreen-control-btn repeat-btn" id="fullscreenRepeat">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/music/music-list.js?v=20250119153000"></script>
+    <script src="src/main.js?v=20250119170000"></script>
+</body>
+</html>
