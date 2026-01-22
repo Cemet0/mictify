@@ -110,6 +110,120 @@ window.MUSIC_LIST = [
         category: 'breakbeat'
     },
     
+    // Cigarettes After Sex Folder
+    {
+        filename: 'Cigarettes After Sex/Apocalypse - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Apocalypse',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Cry - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Cry',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Dreaming Of You - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Dreaming Of You',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Each Time You Fall In Love - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Each Time You Fall In Love',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Falling In Love - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Falling In Love',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Heavenly - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Heavenly',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/John Wayne - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'John Wayne',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/K. - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'K.',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Keep On Loving You - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Keep On Loving You',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Neon Moon - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Neon Moon',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Opera House - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Opera House',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Sesame Syrup - Cigarettes After Sex - Cigarettes After Sex (1).mp3',
+        title: 'Sesame Syrup',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Sunsetz - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Sunsetz',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    {
+        filename: 'Cigarettes After Sex/Sweet - Cigarettes After Sex - Cigarettes After Sex.mp3',
+        title: 'Sweet',
+        artist: 'Cigarettes After Sex',
+        album: 'Cigarettes After Sex',
+        genre: 'Dream Pop',
+        category: 'cigarettes-after-sex'
+    },
+    
     // For Revenge Folder
     {
         filename: 'for revenge/For Revenge - Derana (Official Video) - FORREVENGEVEVO.mp3',
@@ -212,13 +326,15 @@ window.MUSIC_LIST = [
 /**
  * MUSIK SUDAH SIAP!
  * 
- * Total: 25 tracks
+ * Total: 39 tracks
  * - Breakbeat: 13 tracks
  * - For Revenge: 12 tracks
+ * - Cigarettes After Sex: 14 tracks
  * 
  * Struktur folder:
- * - assets/music/breakbeat/ (15 tracks)
+ * - assets/music/breakbeat/ (13 tracks)
  * - assets/music/for revenge/ (12 tracks)
+ * - assets/music/Cigarettes After Sex/ (14 tracks)
  * 
  * Buka index.html di browser untuk mulai streaming musik!
  */

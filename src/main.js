@@ -189,6 +189,11 @@ function getPlaylistCategories() {
             name: 'For Revenge',
             icon: '🔥⚡',
             tracks: library.filter(track => track.category === 'for-revenge')
+        },
+        'cigarettes-after-sex': {
+            name: 'Cigarettes After Sex',
+            icon: '🌙✨',
+            tracks: library.filter(track => track.category === 'cigarettes-after-sex')
         }
     };
     
@@ -248,10 +253,16 @@ function openPlaylist(playlistType) {
     } else if (playlistType === 'for-revenge') {
         playlistImage.src = 'assets/img/profilRevenge.jpg';
         playlistImage.alt = 'For Revenge';
+    } else if (playlistType === 'cigarettes-after-sex') {
+        playlistImage.src = 'assets/img/casProfile.jpg';
+        playlistImage.alt = 'Cigarettes After Sex';
     }
     
     document.getElementById('currentPlaylistTitle').textContent = category.name;
     document.getElementById('currentPlaylistSubtitle').textContent = `${category.tracks.length} songs`;
+    
+    // Update search bar placeholder and functionality
+    updateSearchForPlaylist(playlistType, category.name);
     
     // Render tracks
     renderTracks(currentPlaylist);
@@ -268,6 +279,9 @@ function openPlaylist(playlistType) {
 function backToPlaylists() {
     document.getElementById('playlist-detail').classList.add('hidden');
     document.getElementById('playlist-categories').classList.remove('hidden');
+    
+    // Reset search bar to default
+    resetSearchToDefault();
 }
 
 /**
@@ -1044,6 +1058,98 @@ function getCurrentPlaylistType() {
 }
 
 /**
+ * Update search bar for specific playlist
+ */
+function updateSearchForPlaylist(playlistType, playlistName) {
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        // Update placeholder text
+        searchInput.placeholder = `Search in ${playlistName}...`;
+        
+        // Clear current search
+        searchInput.value = '';
+        
+        // Store current playlist type for search context
+        searchInput.dataset.playlistType = playlistType;
+        
+        console.log(`🔍 Search updated for playlist: ${playlistName}`);
+    }
+}
+
+/**
+ * Reset search bar to default
+ */
+function resetSearchToDefault() {
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        // Reset placeholder text
+        searchInput.placeholder = 'Search playlists...';
+        
+        // Clear current search
+        searchInput.value = '';
+        
+        // Remove playlist context
+        delete searchInput.dataset.playlistType;
+        
+        console.log('🔍 Search reset to default');
+    }
+}
+
+/**
+ * Search tracks in current playlist
+ */
+function searchInPlaylist(query) {
+    if (!currentPlaylist || currentPlaylist.length === 0) {
+        return;
+    }
+    
+    const filteredTracks = originalPlaylist.filter(track => {
+        const searchText = query.toLowerCase();
+        return (
+            track.title.toLowerCase().includes(searchText) ||
+            track.artist.toLowerCase().includes(searchText) ||
+            track.album.toLowerCase().includes(searchText)
+        );
+    });
+    
+    // Update current playlist with filtered results
+    currentPlaylist = [...filteredTracks];
+    
+    // Apply shuffle if it's on
+    if (isShuffleOn && filteredTracks.length > 0) {
+        shufflePlaylist();
+    }
+    
+    // Re-render tracks
+    renderTracks(currentPlaylist);
+    
+    console.log(`🔍 Found ${filteredTracks.length} tracks matching "${query}"`);
+}
+
+/**
+ * Search playlists in categories view
+ */
+function searchPlaylists(query) {
+    document.querySelectorAll('.playlist-card').forEach(card => {
+        const title = card.querySelector('.playlist-title').textContent.toLowerCase();
+        const shouldShow = title.includes(query.toLowerCase());
+        card.style.display = shouldShow ? 'block' : 'none';
+    });
+    
+    console.log(`🔍 Searching playlists for "${query}"`);
+}
+function getCurrentPlaylistType() {
+    // Simple detection based on current playlist content
+    if (currentPlaylist.length > 0) {
+        const firstTrack = currentPlaylist[0];
+        return firstTrack.category || 'breakbeat';
+    }
+    return 'breakbeat';
+}
+
+/**
  * Open fullscreen mobile player
  */
 function openFullscreenPlayer() {
@@ -1091,7 +1197,8 @@ function updateFullscreenPlayer() {
         const playlistType = getCurrentPlaylistType();
         const playlistNames = {
             'breakbeat': 'Breakbeat',
-            'for-revenge': 'For Revenge'
+            'for-revenge': 'For Revenge',
+            'cigarettes-after-sex': 'Cigarettes After Sex'
         };
         playlistNameElement.textContent = playlistNames[playlistType] || 'Playlist';
     }
@@ -1105,6 +1212,8 @@ function updateFullscreenPlayer() {
         
         if (playlistType === 'for-revenge') {
             imageSrc = 'assets/img/profilRevenge.jpg';
+        } else if (playlistType === 'cigarettes-after-sex') {
+            imageSrc = 'assets/img/casProfile.jpg';
         }
         
         albumImage.src = imageSrc;
@@ -1449,17 +1558,52 @@ function setupAudioPlayer() {
  * Setup event listeners
  */
 function setupEventListeners() {
-    // Search functionality
+    // Search functionality - Enhanced with playlist context
     document.getElementById('searchInput').addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
+        const searchInput = e.target;
         
-        // Simple search in current view
-        if (!document.getElementById('playlist-categories').classList.contains('hidden')) {
-            // Search playlist categories
-            document.querySelectorAll('.playlist-card').forEach(card => {
-                const title = card.querySelector('.playlist-title').textContent.toLowerCase();
-                card.style.display = title.includes(query) ? 'block' : 'none';
-            });
+        // Check if we're in playlist detail view or categories view
+        const isInPlaylistDetail = !document.getElementById('playlist-categories').classList.contains('hidden');
+        const playlistType = searchInput.dataset.playlistType;
+        
+        if (!isInPlaylistDetail && playlistType) {
+            // We're in playlist detail view - search within current playlist
+            if (query.trim() === '') {
+                // If search is empty, restore original playlist
+                currentPlaylist = [...originalPlaylist];
+                
+                // Apply shuffle if it's on
+                if (isShuffleOn) {
+                    shufflePlaylist();
+                }
+                
+                renderTracks(currentPlaylist);
+            } else {
+                // Search within playlist tracks
+                searchInPlaylist(query);
+            }
+        } else {
+            // We're in categories view - search playlists
+            searchPlaylists(query);
+        }
+    });
+    
+    // Clear search when input loses focus and is empty
+    document.getElementById('searchInput').addEventListener('blur', (e) => {
+        const searchInput = e.target;
+        const playlistType = searchInput.dataset.playlistType;
+        
+        if (searchInput.value.trim() === '' && playlistType) {
+            // Restore original playlist if search is cleared
+            currentPlaylist = [...originalPlaylist];
+            
+            // Apply shuffle if it's on
+            if (isShuffleOn) {
+                shufflePlaylist();
+            }
+            
+            renderTracks(currentPlaylist);
         }
     });
     
