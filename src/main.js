@@ -302,7 +302,7 @@ function renderTracks(tracks) {
                 <div class="track-title">${track.title}</div>
                 <div class="track-artist">${track.artist}</div>
             </div>
-            <div class="track-duration" id="duration-${track.id}">Loading...</div>
+            <div class="track-duration">${formatDuration(track.duration)}</div>
             <div class="track-actions">
                 <button class="track-action-btn" onclick="event.stopPropagation(); playTrack(${index})">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -313,78 +313,7 @@ function renderTracks(tracks) {
         </div>
     `).join('');
     
-    // Load durations for all tracks
-    loadTrackDurations(tracks);
-}
-
-/**
- * Load durations for tracks
- */
-async function loadTrackDurations(tracks) {
-    console.log('🎵 Loading track durations...');
-    
-    for (let i = 0; i < tracks.length; i++) {
-        const track = tracks[i];
-        
-        try {
-            if (track.duration > 0) {
-                // Already have duration
-                const durationElement = document.getElementById(`duration-${track.id}`);
-                if (durationElement) {
-                    durationElement.textContent = formatDuration(track.duration);
-                }
-            } else {
-                // Show loading
-                const durationElement = document.getElementById(`duration-${track.id}`);
-                if (durationElement) {
-                    durationElement.textContent = '...';
-                }
-                
-                // Load duration
-                const duration = await getTrackDuration(track.fileUrl);
-                track.duration = duration;
-                
-                // Update UI
-                if (durationElement) {
-                    if (duration > 0) {
-                        durationElement.textContent = formatDuration(duration);
-                    } else {
-                        durationElement.textContent = '--:--';
-                    }
-                }
-                
-                // Update in localStorage
-                updateTrackDurationInLibrary(track.id, duration);
-                
-                console.log(`✅ Loaded duration for "${track.title}": ${formatDuration(duration)}`);
-            }
-        } catch (error) {
-            console.error(`❌ Error loading duration for ${track.title}:`, error);
-            const durationElement = document.getElementById(`duration-${track.id}`);
-            if (durationElement) {
-                durationElement.textContent = '--:--';
-            }
-        }
-        
-        // Small delay to prevent overwhelming the browser
-        if (i < tracks.length - 1) {
-            await new Promise(resolve => setTimeout(resolve, 100));
-        }
-    }
-    
-    console.log('✅ All track durations loaded');
-}
-
-/**
- * Update track duration in localStorage
- */
-function updateTrackDurationInLibrary(trackId, duration) {
-    const library = getLibrary();
-    const track = library.find(t => t.id === trackId);
-    if (track) {
-        track.duration = duration;
-        localStorage.setItem('music_library', JSON.stringify(library));
-    }
+    console.log(`🎵 Rendered ${tracks.length} tracks with durations`);
 }
 
 /**
@@ -1436,50 +1365,6 @@ function updateRepeatButton() {
             break;
     }
 }
-function getTrackDuration(audioUrl) {
-    return new Promise((resolve) => {
-        const audio = new Audio();
-        
-        const cleanup = () => {
-            audio.removeEventListener('loadedmetadata', onLoadedMetadata);
-            audio.removeEventListener('error', onError);
-            audio.removeEventListener('canplaythrough', onCanPlayThrough);
-        };
-        
-        const onLoadedMetadata = () => {
-            cleanup();
-            resolve(audio.duration || 0);
-        };
-        
-        const onCanPlayThrough = () => {
-            cleanup();
-            resolve(audio.duration || 0);
-        };
-        
-        const onError = () => {
-            cleanup();
-            console.warn(`Could not load duration for: ${audioUrl}`);
-            resolve(0);
-        };
-        
-        // Set up event listeners
-        audio.addEventListener('loadedmetadata', onLoadedMetadata);
-        audio.addEventListener('canplaythrough', onCanPlayThrough);
-        audio.addEventListener('error', onError);
-        
-        // Timeout after 10 seconds
-        setTimeout(() => {
-            cleanup();
-            resolve(0);
-        }, 10000);
-        
-        // Start loading
-        audio.preload = 'metadata';
-        audio.src = audioUrl;
-        audio.load();
-    });
-}
-
 /**
  * Setup audio player controls
  */
