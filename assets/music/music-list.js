@@ -4,10 +4,11 @@
  * Durasi sudah ditentukan untuk menghindari loading
  * Diurutkan berdasarkan abjad A-Z per kategori
  * 
- * Updated: 2026-02-04T02:00:00.000Z
+ * Updated: 2026-02-04T02:15:00.000Z
  */
 
 window.MUSIC_LIST = [
+    // BREAKBEAT TRACKS (14 tracks)
     {
         "filename": "breakbeat/DJ BABY - JUSTIN BIEBER REMIX TIKTOK BY FEBRY REMIX   DJ TIKTOK TERBARU 2025!!! - DJ AMINZZZ.mp3",
         "title": "Baby - Justin Bieber Remix TikTok (DJ TikTok Terbaru 2025)",
@@ -72,8 +73,17 @@ window.MUSIC_LIST = [
         "duration": 205
     },
     {
+        "filename": "breakbeat/Fourtwnty, Charita Utami - Mangu (Whisnu Santika Edit) - Whisnu Santika.mp3",
+        "title": "Mangu (Whisnu Santika Edit)",
+        "artist": "Fourtwnty, Charita Utami",
+        "album": "Whisnu Santika Edits",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 245
+    },
+    {
         "filename": "breakbeat/DJ NGGA DULU - JANGAN LAGI LAGI KAMU CARI CARI SLOW VIRAL TIKTOK - BORLEN RMX TEAM.mp3",
-        "title": "Jangan Lagi Lagi Kamu Cari Cari (Slow Viral TikTok)",
+        "title": "Ngga Dulu - Jangan Lagi Lagi Kamu Cari Cari (Slow Viral TikTok)",
         "artist": "DJ NGGA DULU - BORLEN RMX TEAM",
         "album": "TikTok Viral",
         "genre": "Breakbeat",
@@ -88,42 +98,6 @@ window.MUSIC_LIST = [
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 188
-    },
-    {
-        "filename": "breakbeat/Fourtwnty, Charita Utami - Mangu (Whisnu Santika Edit) - Whisnu Santika.mp3",
-        "title": "Mangu (Whisnu Santika Edit)",
-        "artist": "Fourtwnty, Charita Utami",
-        "album": "Whisnu Santika Edits",
-        "genre": "Breakbeat",
-        "category": "breakbeat",
-        "duration": 245
-    },
-    {
-        "filename": "breakbeat/musicFile-1770167704029-7649219.mp3",
-        "title": "SENCY REMIX",
-        "artist": "DIA & TENXI",
-        "album": "Unknown Album",
-        "genre": "Breakbeat",
-        "category": "breakbeat",
-        "duration": 304
-    },
-    {
-        "filename": "breakbeat/SENCY REMIX - DIA & TENXI.mp3",
-        "title": "SENCY REMIX - DIA & TENXI",
-        "artist": "Sency",
-        "album": "Remix Collection",
-        "genre": "Breakbeat",
-        "category": "breakbeat",
-        "duration": 298
-    },
-    {
-        "filename": "breakbeat/SENCY_REMIX_DIA_TENXI.mp3",
-        "title": "SENCY REMIX DIA TENXI",
-        "artist": "Sency",
-        "album": "Remix Collection",
-        "genre": "Breakbeat",
-        "category": "breakbeat",
-        "duration": 295
     },
     {
         "filename": "breakbeat/DJ SO ASU NAYKILLA PELUKAN YANG HANGAT MENJADI BAYANGAN SO ASU FULL SONG VIRAL TIKTOK 2025 - Elart LA.mp3",
@@ -161,6 +135,8 @@ window.MUSIC_LIST = [
         "category": "breakbeat",
         "duration": 225
     },
+
+    // FOR REVENGE TRACKS (12 tracks)
     {
         "filename": "for-revenge/For Revenge & Fiersa Besari - Ada Selamanya (Official Music Video) - DIDI MUSIC RECORDS.mp3",
         "title": "Ada Selamanya (ft. Fiersa Besari)",
@@ -400,13 +376,13 @@ window.MUSIC_LIST = [
 /**
  * MUSIK SUDAH SIAP!
  * 
- * Total: 43 tracks
- * - Breakbeat: 17 tracks
+ * Total: 40 tracks
+ * - Breakbeat: 14 tracks
  * - For Revenge: 12 tracks
  * - Cigarettes After Sex: 14 tracks
  * 
  * Struktur folder:
- * - assets/music/breakbeat/ (17 tracks)
+ * - assets/music/breakbeat/ (14 tracks)
  * - assets/music/for revenge/ (12 tracks)
  * - assets/music/Cigarettes After Sex/ (14 tracks)
  * 
