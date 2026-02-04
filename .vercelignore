@@ -1,0 +1,23 @@
+# Backend files (tidak perlu di deploy ke Vercel)
+backend/
+.kiro/
+test/
+
+# Development files
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Node modules
+node_modules/
+
+# Database files
+*.db
+*.sqlite
+
+# Temporary files
+*.tmp
+*.temp

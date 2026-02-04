@@ -1,169 +1,74 @@
-# Breakbeat Music Streaming
+# 🎵 Mictify - Modern Music Streaming App
 
-Aplikasi streaming musik breakbeat, DJ, dan remix berbasis web yang dibangun dengan vanilla JavaScript, HTML5, dan CSS3.
+Aplikasi streaming musik modern dengan admin panel terintegrasi, dibangun dengan vanilla JavaScript dan MySQL.
 
-## 🎵 Fitur Utama
+## ✨ Features
 
-- **Load File Lokal**: Musik dimuat dari folder assets/music
-- **Audio Player**: Kontrol lengkap dengan queue management
-- **Playlist Management**: Buat dan kelola playlist musik
-- **Search & Filter**: Cari berdasarkan judul, artis, genre, BPM
-- **Responsive Design**: Optimal untuk desktop dan mobile
-- **Offline Storage**: Data tersimpan di browser localStorage
+- 🎶 **Music Streaming** - 3 kategori playlist (Breakbeat, For Revenge, Cigarettes After Sex)
+- 📱 **Mobile Responsive** - Floating player dan fullscreen mode
+- 🔧 **Admin Panel** - Upload, manage, dan delete musik
+- 🗄️ **Database Integration** - MySQL dengan auto-sync
+- 🌐 **PWA Support** - Background playback dan installable
+- 🎨 **Liquid Glass UI** - Modern glassmorphism design
 
-## 🚀 Quick Start
+## 🚀 Deployment
 
-### Cara Pakai (Tanpa Install Apapun)
-
-1. **Download** semua file project
-2. **Tambahkan file musik** ke folder `assets/music/`
-3. **Update daftar musik** di file `assets/music/music-list.js`
-4. **Buka `index.html`** langsung di browser
-5. **Mulai streaming!** 🎵
-
-## 📁 Cara Menambah Musik
-
-### 1. Copy File Musik
-Tambahkan file musik (.mp3, .wav, .m4a) ke folder:
-```
-assets/music/
-├── your-song-1.mp3
-├── your-song-2.wav
-├── your-song-3.m4a
-└── music-list.js
+### Frontend (Vercel)
+1. Update `config.js` dengan URL backend production
+2. Deploy ke Vercel:
+```bash
+vercel --prod
 ```
 
-### 2. Update music-list.js
-Edit file `assets/music/music-list.js` dan tambahkan entry baru:
+### Backend (Railway/Render)
+1. Deploy folder `backend/` ke Railway atau Render
+2. Setup environment variables:
+   - `DB_HOST`
+   - `DB_USER` 
+   - `DB_PASSWORD`
+   - `DB_NAME`
+   - `JWT_SECRET`
+3. Update CORS origins dengan URL frontend
 
-```javascript
-window.MUSIC_LIST = [
-    {
-        filename: 'your-song-1.mp3',     // Nama file di folder assets/music/
-        title: 'Judul Lagu',            // Judul yang ditampilkan
-        artist: 'Nama Artis',           // Nama artis/DJ
-        album: 'Nama Album',            // Album (opsional)
-        genre: 'Breakbeat',             // Genre musik
-        bpm: 140,                       // BPM (beats per minute)
-        key: 'Am'                       // Key musik (opsional)
-    },
-    // Tambahkan lagu lain di sini...
-];
-```
-
-### 3. Refresh Browser
-Setelah menambah file dan update music-list.js, refresh halaman untuk melihat musik baru.
-
-## 📁 Struktur Project
+## 📁 Project Structure
 
 ```
-breakbeat-music-streaming/
-├── index.html              # Main HTML file - BUKA INI!
-├── css/                    # Stylesheets
-│   ├── reset.css          # CSS reset
-│   ├── variables.css      # CSS custom properties
-│   ├── main.css           # Main styles
-│   └── responsive.css     # Responsive styles
-├── src/                   # JavaScript
-│   └── main.js           # All application code
-├── assets/               # Static assets
-│   └── music/           # FOLDER MUSIK - TARUH FILE MUSIK DI SINI
-│       ├── music-list.js # Daftar musik - EDIT FILE INI
-│       └── *.mp3        # File musik kamu
-└── README.md            # Documentation
+mictify/
+├── index.html              # Main app
+├── config.js              # Environment config
+├── manifest.json          # PWA manifest
+├── sw.js                  # Service worker
+├── vercel.json           # Vercel config
+├── assets/
+│   ├── music/            # Music files & metadata
+│   └── img/              # Images
+├── css/                  # Stylesheets
+├── src/
+│   └── main_simple.js    # Main JavaScript
+└── backend/              # Node.js backend (deploy separately)
+    ├── server.js
+    ├── routes/
+    ├── config/
+    └── uploads/
 ```
 
-## 🎯 Cara Penggunaan
+## 🎯 Admin Panel
 
-### 1. Library
-- Semua musik dari folder `assets/music/` akan muncul di Library
-- Klik track untuk memutar
-- Gunakan search dan filter untuk mencari musik
+- **Login**: username: `admin`, password: `12345678`
+- **Features**: Upload musik, delete tracks, generate music-list.js
+- **Access**: Klik tombol "Admin" di header
 
-### 2. Audio Player
-- Kontrol play/pause/stop/next/previous
-- Atur volume dengan slider
-- Klik progress bar untuk seek
-- Auto-play next track dalam queue
+## 🔧 Development
 
-### 3. Queue
-- Track yang diputar otomatis masuk queue
-- Lihat urutan pemutaran di tab Queue
-- Hapus track dari queue atau clear semua
+```bash
+# Start backend
+cd backend
+node server.js
 
-### 4. Playlist
-- Buat playlist baru dengan tombol "Buat Playlist"
-- Tambahkan track ke playlist dengan tombol ➕
-- Kelola playlist di tab Playlists
-
-### 5. Search & Filter
-- **Search**: Cari berdasarkan judul, artis, atau album
-- **Genre Filter**: Filter berdasarkan genre musik
-- **BPM Filter**: Filter berdasarkan rentang BPM untuk DJ mixing
-
-## 📱 Mobile Support
-
-Aplikasi fully responsive dengan fitur:
-- Touch-friendly controls
-- Hamburger menu navigation
-- Optimized player layout
-- Mobile-friendly interface
-
-## 🎨 Theming
-
-Aplikasi menggunakan dark theme yang cocok untuk DJ. Edit `css/variables.css` untuk customization:
-
-```css
-:root {
-    --accent-primary: #ff6b35;    /* Warna utama */
-    --bg-primary: #0a0a0a;        /* Background */
-    --text-primary: #ffffff;      /* Text color */
-}
+# Open frontend
+# Buka index.html di browser atau live server
 ```
 
-## 🔒 Privacy & Security
+## 📝 License
 
-- **No Backend**: Semua data tersimpan lokal di browser
-- **No Upload**: File musik dimuat langsung dari folder lokal
-- **No Tracking**: Tidak ada analytics atau tracking
-- **Offline First**: Bekerja tanpa koneksi internet
-
-## 🐛 Troubleshooting
-
-### Musik Tidak Muncul
-- Pastikan file musik ada di folder `assets/music/`
-- Check file `music-list.js` sudah diupdate dengan benar
-- Pastikan nama file di `music-list.js` sama dengan file asli
-- Refresh browser setelah menambah musik
-
-### Audio Tidak Bisa Diputar
-- Check format file didukung (MP3, WAV, M4A)
-- Pastikan path file benar di `music-list.js`
-- Coba buka Developer Tools (F12) untuk lihat error
-
-### Data Playlist Hilang
-- Data tersimpan di localStorage browser
-- Clearing browser data akan menghapus playlist
-- Gunakan browser yang sama untuk akses data
-
-## 🚧 Coming Soon
-
-- [ ] BPM Detection otomatis
-- [ ] Crossfade functionality
-- [ ] Waveform visualization
-- [ ] Keyboard shortcuts
-- [ ] Export/Import playlist
-- [ ] Advanced search filters
-
-## 📄 License
-
-MIT License - bebas digunakan dan dimodifikasi.
-
----
-
-**Breakbeat Music Streaming** - Built with ❤️ for DJs and music lovers
-
-## 🎵 Cara Mulai:
-1. **Tambahkan file musik** ke `assets/music/`
-2. **Edit `music-list.js`** dengan info lagu
-3. **Buka `index.html`** di browser!
+MIT License - Feel free to use and modify!
