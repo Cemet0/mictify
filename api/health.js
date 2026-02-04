@@ -1,4 +1,4 @@
-// Vercel Serverless Function - Health Check
+// Vercel Serverless Function - Health Check v2
 export default function handler(req, res) {
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -13,10 +13,11 @@ export default function handler(req, res) {
     if (req.method === 'GET') {
         res.status(200).json({
             success: true,
-            message: 'Mictify API is running on Vercel',
+            message: 'Mictify API is running on Vercel - Updated',
             timestamp: new Date().toISOString(),
-            version: '1.0.0',
-            platform: 'Vercel Serverless Functions'
+            version: '1.0.1',
+            platform: 'Vercel Serverless Functions',
+            status: 'healthy'
         });
     } else {
         res.status(405).json({
