@@ -1,5 +1,6 @@
 /**
  * Configuration for Mictify App - Frontend Only
+ * Updated: 2026-02-04T02:30:00.000Z
  */
 
 const CONFIG = {
