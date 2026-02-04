@@ -1,7 +1,13 @@
-# Backend files (tidak perlu di deploy ke Vercel)
-backend/
+# Vercel Ignore File - Frontend Only
+
+# Development and documentation files
+.git/
+.gitignore
+README.md
 .kiro/
 test/
+admin/
+backend/
 
 # Development files
 *.log
@@ -11,7 +17,7 @@ test/
 .env.test.local
 .env.production.local
 
-# Node modules
+# Node modules (if any)
 node_modules/
 
 # Database files
@@ -21,3 +27,11 @@ node_modules/
 # Temporary files
 *.tmp
 *.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/

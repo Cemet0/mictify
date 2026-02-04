@@ -4,18 +4,18 @@
  * Durasi sudah ditentukan untuk menghindari loading
  * Diurutkan berdasarkan abjad A-Z per kategori
  * 
- * Auto-generated from database: 2026-02-04T01:15:04.224Z
+ * Updated: 2026-02-04T02:00:00.000Z
  */
 
 window.MUSIC_LIST = [
     {
-        "filename": "breakbeat/Baby - Justin Bieber -  Amapiano Remix - Yukepo88Music.mp3",
-        "title": "Baby (Amapiano Remix)",
-        "artist": "Justin Bieber - Yukepo88Music",
-        "album": "Remix Collection",
+        "filename": "breakbeat/DJ BABY - JUSTIN BIEBER REMIX TIKTOK BY FEBRY REMIX   DJ TIKTOK TERBARU 2025!!! - DJ AMINZZZ.mp3",
+        "title": "Baby - Justin Bieber Remix TikTok (DJ TikTok Terbaru 2025)",
+        "artist": "DJ AMINZZZ - Febry Remix",
+        "album": "TikTok Remix 2025",
         "genre": "Breakbeat",
         "category": "breakbeat",
-        "duration": 180
+        "duration": 185
     },
     {
         "filename": "breakbeat/DJ BERUBAH TENXI  SUDAH SELESAI CERITAPUN BERAKHIR VIRAL TIKTOK TERBARU 2026 - Jieng Fvnky.mp3",
@@ -43,6 +43,15 @@ window.MUSIC_LIST = [
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 240
+    },
+    {
+        "filename": "breakbeat/DJ SENCY DIA & TENXI ELART REMIX SAMA SAMA SUKA TAPI NUNGGU APA FULL SONG VIRAL TIKTOK 2025 - Elart LA.mp3",
+        "title": "Dia & Tenxi - Sama Sama Suka Tapi Nunggu Apa (Elart Remix Viral TikTok 2025)",
+        "artist": "DJ Sency - Elart LA",
+        "album": "TikTok Viral 2025",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 200
     },
     {
         "filename": "breakbeat/DROP ENAKEUN V46 X NGAPAIN REPOT X KASIH ABA ABA COCOK BUAT DI MOBIL BY AZIL REMIXER - Azil Remixer.mp3",
@@ -97,6 +106,24 @@ window.MUSIC_LIST = [
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 304
+    },
+    {
+        "filename": "breakbeat/SENCY REMIX - DIA & TENXI.mp3",
+        "title": "SENCY REMIX - DIA & TENXI",
+        "artist": "Sency",
+        "album": "Remix Collection",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 298
+    },
+    {
+        "filename": "breakbeat/SENCY_REMIX_DIA_TENXI.mp3",
+        "title": "SENCY REMIX DIA TENXI",
+        "artist": "Sency",
+        "album": "Remix Collection",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 295
     },
     {
         "filename": "breakbeat/DJ SO ASU NAYKILLA PELUKAN YANG HANGAT MENJADI BAYANGAN SO ASU FULL SONG VIRAL TIKTOK 2025 - Elart LA.mp3",
@@ -373,20 +400,20 @@ window.MUSIC_LIST = [
 /**
  * MUSIK SUDAH SIAP!
  * 
- * Total: 40 tracks
- * - Breakbeat: 14 tracks
+ * Total: 43 tracks
+ * - Breakbeat: 17 tracks
  * - For Revenge: 12 tracks
  * - Cigarettes After Sex: 14 tracks
  * 
  * Struktur folder:
- * - assets/music/breakbeat/ (14 tracks)
+ * - assets/music/breakbeat/ (17 tracks)
  * - assets/music/for revenge/ (12 tracks)
  * - assets/music/Cigarettes After Sex/ (14 tracks)
  * 
  * ✨ FITUR BARU: 
  * - Durasi musik sudah ditentukan (tanpa loading)
  * - Semua lagu diurutkan A-Z per kategori
- * - Auto-generated dari database
+ * - Updated dengan file musik terbaru
  * 
  * Buka index.html di browser untuk mulai streaming musik!
  */
