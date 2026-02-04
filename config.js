@@ -6,7 +6,7 @@ const CONFIG = {
     // API Base URL - ganti dengan URL backend production
     API_BASE_URL: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
         ? 'http://127.0.0.1:3001/api'  // Development
-        : 'https://your-backend-url.railway.app/api', // Production - GANTI INI
+        : 'https://mictify-production.up.railway.app/api', // Production
     
     // App Info
     APP_NAME: 'Mictify',

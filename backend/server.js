@@ -18,7 +18,16 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-    origin: ['http://127.0.0.1:5500', 'http://localhost:5500', 'http://127.0.0.1:3000', 'http://localhost:3000', 'file://', 'null'],
+    origin: [
+        'http://127.0.0.1:5500', 
+        'http://localhost:5500', 
+        'http://127.0.0.1:3000', 
+        'http://localhost:3000', 
+        'https://mictify.vercel.app',           // Vercel domain - GANTI DENGAN DOMAIN KAMU
+        'https://mictify-git-main.vercel.app',  // Vercel preview
+        'file://', 
+        'null'
+    ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
