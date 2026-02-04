@@ -1,5 +1,5 @@
 /**
- * Configuration for Mictify App - Vercel Deployment
+ * Configuration for Mictify App - Frontend Only
  */
 
 const CONFIG = {
@@ -10,10 +10,8 @@ const CONFIG = {
     // Environment
     ENVIRONMENT: 'production',
     
-    // API Configuration
-    API_BASE_URL: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:3000/api'  // Local development
-        : '/api',                      // Vercel production (same domain)
+    // Frontend-only mode (no backend)
+    FRONTEND_ONLY: true,
     
     // Music Storage
     MUSIC_PATH: './assets/music/',
@@ -26,7 +24,7 @@ const CONFIG = {
     CACHE_DURATION: 86400, // 24 hours
     
     // Vercel Deployment
-    VERCEL_URL: 'https://mictify.vercel.app', // Update with your domain
+    VERCEL_URL: 'https://mictify.vercel.app',
     
     // Features
     FEATURES: {
@@ -37,8 +35,8 @@ const CONFIG = {
         SHUFFLE: true,
         REPEAT: true,
         VOLUME_CONTROL: true,
-        ADMIN_PANEL: true,  // Enabled with Vercel API
-        DATABASE: true      // Vercel Postgres
+        ADMIN_PANEL: false,  // Disabled - frontend only
+        DATABASE: false      // No database
     }
 };
 

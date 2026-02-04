@@ -39,12 +39,6 @@
                         </svg>
                         Install App
                     </button>
-                    <button id="adminBtn" class="admin-btn" onclick="showAdminLogin()">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Admin
-                    </button>
                 </div>
             </div>
         </header>
@@ -133,93 +127,6 @@
                 </div>
             </section>
         </main>
-
-        <!-- Admin Panel -->
-        <div id="admin-panel" style="display: none; padding: 24px; color: white; background: #121212; min-height: 100vh; overflow-y: auto;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h1 style="color: #1db954; margin-bottom: 24px; font-size: 32px; font-weight: 700;">🎵 Mictify Admin Panel</h1>
-                
-                <!-- Stats -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 24px;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
-                        <div style="font-size: 24px; color: #1db954; font-weight: 700;" id="adminTotalTracks">0</div>
-                        <div style="color: #b3b3b3; font-size: 14px;">Total Tracks</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
-                        <div style="font-size: 24px; color: #1db954; font-weight: 700;" id="adminBreakbeatCount">0</div>
-                        <div style="color: #b3b3b3; font-size: 14px;">Breakbeat</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
-                        <div style="font-size: 24px; color: #1db954; font-weight: 700;" id="adminRevengeCount">0</div>
-                        <div style="color: #b3b3b3; font-size: 14px;">For Revenge</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
-                        <div style="font-size: 24px; color: #1db954; font-weight: 700;" id="adminCasCount">0</div>
-                        <div style="color: #b3b3b3; font-size: 14px;">Cigarettes After Sex</div>
-                    </div>
-                </div>
-
-                <!-- Actions -->
-                <div style="margin-bottom: 24px; display: flex; gap: 16px; flex-wrap: wrap;">
-                    <button onclick="loadAdminMusic()" style="background: #1db954; color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600;">
-                        🔄 Refresh Data
-                    </button>
-                    <button onclick="generateAdminMusicList()" style="background: #1db954; color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600;">
-                        📄 Generate music-list.js
-                    </button>
-                    <button onclick="toggleUploadSection()" style="background: rgba(29,185,84,0.2); color: white; border: 1px solid #1db954; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600;">
-                        ⬆️ Upload Music
-                    </button>
-                </div>
-
-                <!-- Upload Section -->
-                <div id="adminUploadSection" style="display: none; background: rgba(255,255,255,0.1); padding: 24px; border-radius: 12px; margin-bottom: 24px;">
-                    <h3 style="color: #1db954; margin-bottom: 20px; font-size: 20px; font-weight: 600;">Upload New Music</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 16px;">
-                        <input type="file" id="adminMusicFile" accept=".mp3" style="grid-column: 1 / -1; padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; font-size: 14px;">
-                        <input type="text" id="adminTitle" placeholder="Title" required style="padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; font-size: 14px;">
-                        <input type="text" id="adminArtist" placeholder="Artist" required style="padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; font-size: 14px;">
-                        <input type="text" id="adminAlbum" placeholder="Album" style="padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; font-size: 14px;">
-                        <select id="adminCategory" required style="padding: 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; font-size: 14px;">
-                            <option value="" style="background: #121212; color: white;">Select Category</option>
-                            <option value="breakbeat" style="background: #121212; color: white;">Breakbeat</option>
-                            <option value="for-revenge" style="background: #121212; color: white;">For Revenge</option>
-                            <option value="cigarettes-after-sex" style="background: #121212; color: white;">Cigarettes After Sex</option>
-                        </select>
-                    </div>
-                    <div style="display: flex; gap: 12px;">
-                        <button onclick="uploadAdminMusic()" style="background: #1db954; color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px;">
-                            ⬆️ Upload
-                        </button>
-                        <button onclick="toggleUploadSection()" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px;">
-                            ❌ Cancel
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Music Table -->
-                <div style="background: rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
-                    <table style="width: 100%; border-collapse: collapse;">
-                        <thead>
-                            <tr style="background: rgba(29,185,84,0.2);">
-                                <th style="padding: 16px; text-align: left; color: #1db954; font-weight: 600;">Title</th>
-                                <th style="padding: 16px; text-align: left; color: #1db954; font-weight: 600;">Artist</th>
-                                <th style="padding: 16px; text-align: left; color: #1db954; font-weight: 600;">Category</th>
-                                <th style="padding: 16px; text-align: left; color: #1db954; font-weight: 600;">Duration</th>
-                                <th style="padding: 16px; text-align: left; color: #1db954; font-weight: 600;">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody id="adminMusicTable">
-                            <tr>
-                                <td colspan="5" style="text-align: center; padding: 40px; color: white;">
-                                    Click "Refresh Data" to load music
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
 
         <!-- Audio Player -->
         <footer class="player" id="player">
@@ -420,43 +327,6 @@
                     </button>
                 </div>
             </div>
-        </div>
-
-        <!-- Admin Login Modal -->
-        <div id="adminLoginModal" class="admin-modal" style="display: none;">
-            <div class="admin-modal-content">
-                <div class="admin-modal-header">
-                    <h2>Admin Login</h2>
-                    <button class="admin-modal-close" onclick="hideAdminLogin()">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="admin-modal-body">
-                    <form id="adminLoginForm" onsubmit="handleAdminLogin(event)">
-                        <div class="admin-form-group">
-                            <label for="adminUsername">Username</label>
-                            <input type="text" id="adminUsername" name="username" required autocomplete="off">
-                        </div>
-                        <div class="admin-form-group">
-                            <label for="adminPassword">Password</label>
-                            <input type="password" id="adminPassword" name="password" required autocomplete="off">
-                        </div>
-                        <div id="adminLoginError" class="admin-error" style="display: none;"></div>
-                        <button type="submit" class="admin-login-btn" id="adminLoginBtn">
-                            <span class="btn-text">Login</span>
-                            <span class="btn-loading" style="display: none;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M12 2a10 10 0 0 1 10 10" stroke="#1db954" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Scripts -->
