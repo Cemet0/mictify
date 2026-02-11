@@ -8,7 +8,7 @@
  */
 
 window.MUSIC_LIST = [
-    // BREAKBEAT TRACKS (14 tracks)
+    // BREAKBEAT TRACKS (16 tracks)
     {
         "filename": "breakbeat/DJ BABY - JUSTIN BIEBER REMIX TIKTOK BY FEBRY REMIX   DJ TIKTOK TERBARU 2025!!! - DJ AMINZZZ.mp3",
         "title": "Baby - Justin Bieber Remix TikTok (DJ TikTok Terbaru 2025)",
@@ -80,6 +80,24 @@ window.MUSIC_LIST = [
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 245
+    },
+    {
+        "filename": "breakbeat/DJ MENERIMA LUKA - BOOTLEG JDM STYLE (imamsidik remix) SOUND FYP TIKTOK 2026!! - Imam Sidik.mp3",
+        "title": "Menerima Luka - Bootleg JDM Style (Imam Sidik Remix - Sound FYP TikTok 2026)",
+        "artist": "DJ Imam Sidik",
+        "album": "TikTok Viral 2026",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 190
+    },
+    {
+        "filename": "breakbeat/DJ MENERIMA LUKA SLOWED NATASYA SABELLA TREND JEDAG JEDUG TIKTOK  VIRAL TIKTOK DJ TERBARU 2025 - Hasan Fvnky RMX [𝙻𝚅] (1).mp3",
+        "title": "Menerima Luka Slowed - Natasya Sabella (Trend Jedag Jedug TikTok Viral 2025)",
+        "artist": "DJ Hasan Fvnky RMX",
+        "album": "TikTok Viral 2025",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 195
     },
     {
         "filename": "breakbeat/DJ NGGA DULU - JANGAN LAGI LAGI KAMU CARI CARI SLOW VIRAL TIKTOK - BORLEN RMX TEAM.mp3",
@@ -376,13 +394,13 @@ window.MUSIC_LIST = [
 /**
  * MUSIK SUDAH SIAP!
  * 
- * Total: 40 tracks
- * - Breakbeat: 14 tracks
+ * Total: 42 tracks
+ * - Breakbeat: 16 tracks
  * - For Revenge: 12 tracks
  * - Cigarettes After Sex: 14 tracks
  * 
  * Struktur folder:
- * - assets/music/breakbeat/ (14 tracks)
+ * - assets/music/breakbeat/ (16 tracks)
  * - assets/music/for revenge/ (12 tracks)
  * - assets/music/Cigarettes After Sex/ (14 tracks)
  * 

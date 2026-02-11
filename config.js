@@ -24,8 +24,8 @@ const CONFIG = {
     CACHE_MUSIC: true,
     CACHE_DURATION: 86400, // 24 hours
     
-    // Vercel Deployment
-    VERCEL_URL: 'https://mictify.vercel.app',
+    // Netlify Deployment
+    NETLIFY_URL: 'https://fancy-scone-a2b742.netlify.app',
     
     // Features
     FEATURES: {
