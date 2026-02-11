@@ -6,7 +6,7 @@
 const CONFIG = {
     // App Info
     APP_NAME: 'Mictify',
-    VERSION: '1.0.0',
+    VERSION: '1.0.1',
     
     // Environment
     ENVIRONMENT: 'production',
