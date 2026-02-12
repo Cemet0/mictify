@@ -8,7 +8,7 @@
  */
 
 window.MUSIC_LIST = [
-    // BREAKBEAT TRACKS (16 tracks)
+    // BREAKBEAT TRACKS (17 tracks)
     {
         "filename": "breakbeat/DJ BABY - JUSTIN BIEBER REMIX TIKTOK BY FEBRY REMIX   DJ TIKTOK TERBARU 2025!!! - DJ AMINZZZ.mp3",
         "title": "Baby - Justin Bieber Remix TikTok (DJ TikTok Terbaru 2025)",
@@ -80,6 +80,15 @@ window.MUSIC_LIST = [
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 245
+    },
+    {
+        "filename": "breakbeat/MALU MALU X SO ASU X CUMA SATU - BOOTLEG REMIX (imamsidik) 2025 - Imam Sidik.mp3",
+        "title": "Malu Malu x So Asu x Cuma Satu - Bootleg Remix 2025",
+        "artist": "DJ Imam Sidik",
+        "album": "Bootleg Remixes 2025",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 200
     },
     {
         "filename": "breakbeat/DJ MENERIMA LUKA - BOOTLEG JDM STYLE (imamsidik remix) SOUND FYP TIKTOK 2026!! - Imam Sidik.mp3",
@@ -394,13 +403,13 @@ window.MUSIC_LIST = [
 /**
  * MUSIK SUDAH SIAP!
  * 
- * Total: 42 tracks
- * - Breakbeat: 16 tracks
+ * Total: 43 tracks
+ * - Breakbeat: 17 tracks
  * - For Revenge: 12 tracks
  * - Cigarettes After Sex: 14 tracks
  * 
  * Struktur folder:
- * - assets/music/breakbeat/ (16 tracks)
+ * - assets/music/breakbeat/ (17 tracks)
  * - assets/music/for revenge/ (12 tracks)
  * - assets/music/Cigarettes After Sex/ (14 tracks)
  * 
