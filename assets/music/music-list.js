@@ -1,18 +1,15 @@
 /**
- * Daftar musik yang tersedia di folder assets/music
- * File musik sudah diorganisir dalam folder berdasarkan kategori
- * Durasi sudah ditentukan untuk menghindari loading
- * Diurutkan berdasarkan abjad A-Z per kategori
- * 
- * Updated: 2026-02-04T02:15:00.000Z
+ * Daftar musik Mictify
+ * Total: 43 tracks (17 Breakbeat + 12 For Revenge + 14 CAS)
+ * Updated: 2026-02-23
  */
 
 window.MUSIC_LIST = [
     // BREAKBEAT TRACKS (17 tracks)
     {
         "filename": "breakbeat/DJ BABY - JUSTIN BIEBER REMIX TIKTOK BY FEBRY REMIX   DJ TIKTOK TERBARU 2025!!! - DJ AMINZZZ.mp3",
-        "title": "Baby - Justin Bieber Remix TikTok (DJ TikTok Terbaru 2025)",
-        "artist": "DJ AMINZZZ - Febry Remix",
+        "title": "Baby - Justin Bieber Remix TikTok",
+        "artist": "DJ AMINZZZ",
         "album": "TikTok Remix 2025",
         "genre": "Breakbeat",
         "category": "breakbeat",
@@ -20,8 +17,8 @@ window.MUSIC_LIST = [
     },
     {
         "filename": "breakbeat/DJ BERUBAH TENXI  SUDAH SELESAI CERITAPUN BERAKHIR VIRAL TIKTOK TERBARU 2026 - Jieng Fvnky.mp3",
-        "title": "Berubah Tenxi - Sudah Selesai Ceritapun Berakhir (Viral TikTok 2026)",
-        "artist": "DJ Jieng Fvnky",
+        "title": "Berubah Tenxi - Sudah Selesai Ceritapun Berakhir",
+        "artist": "Jieng Fvnky",
         "album": "TikTok Viral 2026",
         "genre": "Breakbeat",
         "category": "breakbeat",
@@ -29,8 +26,8 @@ window.MUSIC_LIST = [
     },
     {
         "filename": "breakbeat/DJ BINTANG 5 TENXI X TOR MONITOR KETUA SLOW VIRAL TIKTOK FULL SONG MAMAN FVNDY 2025 - KAKEK YETE.mp3",
-        "title": "Bintang 5 Tenxi x Tor Monitor Ketua (Slow Viral TikTok 2025)",
-        "artist": "DJ KAKEK YETE - MAMAN FVNDY",
+        "title": "Bintang 5 Tenxi x Tor Monitor Ketua",
+        "artist": "KAKEK YETE",
         "album": "TikTok Viral 2025",
         "genre": "Breakbeat",
         "category": "breakbeat",
@@ -47,8 +44,8 @@ window.MUSIC_LIST = [
     },
     {
         "filename": "breakbeat/DJ SENCY DIA & TENXI ELART REMIX SAMA SAMA SUKA TAPI NUNGGU APA FULL SONG VIRAL TIKTOK 2025 - Elart LA.mp3",
-        "title": "Dia & Tenxi - Sama Sama Suka Tapi Nunggu Apa (Elart Remix Viral TikTok 2025)",
-        "artist": "DJ Sency - Elart LA",
+        "title": "Dia & Tenxi - Sama Sama Suka Tapi Nunggu Apa",
+        "artist": "Elart LA",
         "album": "TikTok Viral 2025",
         "genre": "Breakbeat",
         "category": "breakbeat",
@@ -56,7 +53,7 @@ window.MUSIC_LIST = [
     },
     {
         "filename": "breakbeat/DROP ENAKEUN V46 X NGAPAIN REPOT X KASIH ABA ABA COCOK BUAT DI MOBIL BY AZIL REMIXER - Azil Remixer.mp3",
-        "title": "Drop Enakeun V46 x Ngapain Repot x Kasih Aba Aba (Cocok Buat Di Mobil)",
+        "title": "Drop Enakeun V46 x Ngapain Repot x Kasih Aba Aba",
         "artist": "Azil Remixer",
         "album": "Car Audio Collection",
         "genre": "Breakbeat",
@@ -65,8 +62,8 @@ window.MUSIC_LIST = [
     },
     {
         "filename": "breakbeat/DJ EEEE AAAA ENGKOL X SENCY X SO ASU SLOW VIRAL TIKTOK FULL SONG MAMAN FVNDY 2026 - Maman Fvndy Rmx.mp3",
-        "title": "EEEE AAAA Engkol x Sency x So Asu (Slow Viral TikTok 2026)",
-        "artist": "DJ Maman Fvndy Rmx",
+        "title": "EEEE AAAA Engkol x Sency x So Asu",
+        "artist": "Maman Fvndy Rmx",
         "album": "TikTok Viral 2026",
         "genre": "Breakbeat",
         "category": "breakbeat",
@@ -83,8 +80,8 @@ window.MUSIC_LIST = [
     },
     {
         "filename": "breakbeat/MALU MALU X SO ASU X CUMA SATU - BOOTLEG REMIX (imamsidik) 2025 - Imam Sidik.mp3",
-        "title": "Malu Malu x So Asu x Cuma Satu - Bootleg Remix 2025",
-        "artist": "DJ Imam Sidik",
+        "title": "Malu Malu x So Asu x Cuma Satu - Bootleg Remix",
+        "artist": "Imam Sidik",
         "album": "Bootleg Remixes 2025",
         "genre": "Breakbeat",
         "category": "breakbeat",
@@ -92,8 +89,8 @@ window.MUSIC_LIST = [
     },
     {
         "filename": "breakbeat/DJ MENERIMA LUKA - BOOTLEG JDM STYLE (imamsidik remix) SOUND FYP TIKTOK 2026!! - Imam Sidik.mp3",
-        "title": "Menerima Luka - Bootleg JDM Style (Imam Sidik Remix - Sound FYP TikTok 2026)",
-        "artist": "DJ Imam Sidik",
+        "title": "Menerima Luka - Bootleg JDM Style",
+        "artist": "Imam Sidik",
         "album": "TikTok Viral 2026",
         "genre": "Breakbeat",
         "category": "breakbeat",
@@ -101,12 +98,15 @@ window.MUSIC_LIST = [
     },
     {
         "filename": "breakbeat/DJ MENERIMA LUKA SLOWED NATASYA SABELLA TREND JEDAG JEDUG TIKTOK  VIRAL TIKTOK DJ TERBARU 2025 - Hasan Fvnky RMX [𝙻𝚅] (1).mp3",
-        "title": "Menerima Luka Slowed - Natasya Sabella (Trend Jedag Jedug TikTok Viral 2025)",
-        "artist": "DJ Hasan Fvnky RMX",
+        "title": "Menerima Luka Slowed - Natasya Sabella",
+        "artist": "Hasan Fvnky RMX",
         "album": "TikTok Viral 2025",
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 195
+    },
+    {
+        "filename": "breakbeat/DJ NG
     },
     {
         "filename": "breakbeat/DJ NGGA DULU - JANGAN LAGI LAGI KAMU CARI CARI SLOW VIRAL TIKTOK - BORLEN RMX TEAM.mp3",
@@ -165,7 +165,7 @@ window.MUSIC_LIST = [
 
     // FOR REVENGE TRACKS (12 tracks)
     {
-        "filename": "for-revenge/For Revenge & Fiersa Besari - Ada Selamanya (Official Music Video) - DIDI MUSIC RECORDS.mp3",
+        "filename": "for revenge/For Revenge & Fiersa Besari - Ada Selamanya (Official Music Video) - DIDI MUSIC RECORDS.mp3",
         "title": "Ada Selamanya (ft. Fiersa Besari)",
         "artist": "For Revenge",
         "album": "Collaborations",
@@ -174,7 +174,7 @@ window.MUSIC_LIST = [
         "duration": 285
     },
     {
-        "filename": "for-revenge/For Revenge - Derana (Official Video) - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/For Revenge - Derana (Official Video) - FORREVENGEVEVO.mp3",
         "title": "Derana",
         "artist": "For Revenge",
         "album": "Official Releases",
@@ -183,7 +183,7 @@ window.MUSIC_LIST = [
         "duration": 245
     },
     {
-        "filename": "for-revenge/For Revenge X Stereo Wall - Jakarta Hari Ini (Official Video) - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/For Revenge X Stereo Wall - Jakarta Hari Ini (Official Video) - FORREVENGEVEVO.mp3",
         "title": "Jakarta Hari Ini (ft. Stereo Wall)",
         "artist": "For Revenge",
         "album": "Collaborations",
@@ -192,7 +192,7 @@ window.MUSIC_LIST = [
         "duration": 258
     },
     {
-        "filename": "for-revenge/For Revenge - Jeda (Official Music Video) - DIDI MUSIC RECORDS (1).mp3",
+        "filename": "for revenge/For Revenge - Jeda (Official Music Video) - DIDI MUSIC RECORDS (1).mp3",
         "title": "Jeda",
         "artist": "For Revenge",
         "album": "Official Releases",
@@ -201,7 +201,7 @@ window.MUSIC_LIST = [
         "duration": 238
     },
     {
-        "filename": "for-revenge/For Revenge - Jentaka (Official Video) ft. Faizal Permana - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/For Revenge - Jentaka (Official Video) ft. Faizal Permana - FORREVENGEVEVO.mp3",
         "title": "Jentaka (ft. Faizal Permana)",
         "artist": "For Revenge",
         "album": "Collaborations",
@@ -210,7 +210,7 @@ window.MUSIC_LIST = [
         "duration": 252
     },
     {
-        "filename": "for-revenge/for Revenge - Menunggu Giliran ft. Elsa Japasal (Official Music Video) - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/for Revenge - Menunggu Giliran ft. Elsa Japasal (Official Music Video) - FORREVENGEVEVO.mp3",
         "title": "Menunggu Giliran (ft. Elsa Japasal)",
         "artist": "For Revenge",
         "album": "Collaborations",
@@ -219,7 +219,7 @@ window.MUSIC_LIST = [
         "duration": 265
     },
     {
-        "filename": "for-revenge/for Revenge - Penyangkalan (Official Music Video) - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/for Revenge - Penyangkalan (Official Music Video) - FORREVENGEVEVO.mp3",
         "title": "Penyangkalan",
         "artist": "For Revenge",
         "album": "Official Releases",
@@ -228,7 +228,7 @@ window.MUSIC_LIST = [
         "duration": 248
     },
     {
-        "filename": "for-revenge/For Revenge - Perayaan Patah Hati (Official Video) ft. Wira Nagara - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/For Revenge - Perayaan Patah Hati (Official Video) ft. Wira Nagara - FORREVENGEVEVO.mp3",
         "title": "Perayaan Patah Hati (ft. Wira Nagara)",
         "artist": "For Revenge",
         "album": "Collaborations",
@@ -237,7 +237,7 @@ window.MUSIC_LIST = [
         "duration": 272
     },
     {
-        "filename": "for-revenge/for Revenge - Sadrah (Official Music Video) - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/for Revenge - Sadrah (Official Music Video) - FORREVENGEVEVO.mp3",
         "title": "Sadrah",
         "artist": "For Revenge",
         "album": "Official Releases",
@@ -246,7 +246,7 @@ window.MUSIC_LIST = [
         "duration": 255
     },
     {
-        "filename": "for-revenge/for Revenge - Semula (Official Music Video) - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/for Revenge - Semula (Official Music Video) - FORREVENGEVEVO.mp3",
         "title": "Semula",
         "artist": "For Revenge",
         "album": "Official Releases",
@@ -255,7 +255,7 @@ window.MUSIC_LIST = [
         "duration": 242
     },
     {
-        "filename": "for-revenge/For Revenge - Serana (Lyrics) - LyricsZone.mp3",
+        "filename": "for revenge/For Revenge - Serana (Lyrics) - LyricsZone.mp3",
         "title": "Serana",
         "artist": "For Revenge",
         "album": "Official Releases",
@@ -264,7 +264,7 @@ window.MUSIC_LIST = [
         "duration": 268
     },
     {
-        "filename": "for-revenge/for Revenge, Stand Here Alone - uKYdS (Official Music Video) - FORREVENGEVEVO.mp3",
+        "filename": "for revenge/for Revenge, Stand Here Alone - uKYdS (Official Music Video) - FORREVENGEVEVO.mp3",
         "title": "uKYdS (ft. Stand Here Alone)",
         "artist": "For Revenge",
         "album": "Collaborations",
@@ -273,7 +273,7 @@ window.MUSIC_LIST = [
         "duration": 275
     },
     {
-        "filename": "cigarettes-after-sex/Apocalypse - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Apocalypse - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Apocalypse",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -282,7 +282,7 @@ window.MUSIC_LIST = [
         "duration": 258
     },
     {
-        "filename": "cigarettes-after-sex/Cry - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Cry - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Cry",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -291,7 +291,7 @@ window.MUSIC_LIST = [
         "duration": 252
     },
     {
-        "filename": "cigarettes-after-sex/Dreaming Of You - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Dreaming Of You - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Dreaming Of You",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -300,7 +300,7 @@ window.MUSIC_LIST = [
         "duration": 275
     },
     {
-        "filename": "cigarettes-after-sex/Each Time You Fall In Love - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Each Time You Fall In Love - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Each Time You Fall In Love",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -309,7 +309,7 @@ window.MUSIC_LIST = [
         "duration": 264
     },
     {
-        "filename": "cigarettes-after-sex/Falling In Love - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Falling In Love - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Falling In Love",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -318,7 +318,7 @@ window.MUSIC_LIST = [
         "duration": 248
     },
     {
-        "filename": "cigarettes-after-sex/Heavenly - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Heavenly - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Heavenly",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -327,7 +327,7 @@ window.MUSIC_LIST = [
         "duration": 290
     },
     {
-        "filename": "cigarettes-after-sex/John Wayne - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/John Wayne - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "John Wayne",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -336,7 +336,7 @@ window.MUSIC_LIST = [
         "duration": 268
     },
     {
-        "filename": "cigarettes-after-sex/K. - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/K. - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "K.",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -345,7 +345,7 @@ window.MUSIC_LIST = [
         "duration": 255
     },
     {
-        "filename": "cigarettes-after-sex/Keep On Loving You - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Keep On Loving You - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Keep On Loving You",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -354,7 +354,7 @@ window.MUSIC_LIST = [
         "duration": 272
     },
     {
-        "filename": "cigarettes-after-sex/Neon Moon - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Neon Moon - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Neon Moon",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -363,7 +363,7 @@ window.MUSIC_LIST = [
         "duration": 285
     },
     {
-        "filename": "cigarettes-after-sex/Opera House - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Opera House - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Opera House",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -372,7 +372,7 @@ window.MUSIC_LIST = [
         "duration": 262
     },
     {
-        "filename": "cigarettes-after-sex/Sesame Syrup - Cigarettes After Sex - Cigarettes After Sex (1).mp3",
+        "filename": "Cigarettes After Sex/Sesame Syrup - Cigarettes After Sex - Cigarettes After Sex (1).mp3",
         "title": "Sesame Syrup",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -381,7 +381,7 @@ window.MUSIC_LIST = [
         "duration": 278
     },
     {
-        "filename": "cigarettes-after-sex/Sunsetz - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Sunsetz - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Sunsetz",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
@@ -390,7 +390,7 @@ window.MUSIC_LIST = [
         "duration": 295
     },
     {
-        "filename": "cigarettes-after-sex/Sweet - Cigarettes After Sex - Cigarettes After Sex.mp3",
+        "filename": "Cigarettes After Sex/Sweet - Cigarettes After Sex - Cigarettes After Sex.mp3",
         "title": "Sweet",
         "artist": "Cigarettes After Sex",
         "album": "Cigarettes After Sex",
