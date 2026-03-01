@@ -1,11 +1,11 @@
 /**
  * Daftar musik Mictify
- * Total: 43 tracks (17 Breakbeat + 12 For Revenge + 14 CAS)
+ * Total: 45 tracks (19 Breakbeat + 12 For Revenge + 14 CAS)
  * Updated: 2026-02-23
  */
 
 window.MUSIC_LIST = [
-    // BREAKBEAT TRACKS (17 tracks)
+    // BREAKBEAT TRACKS (19 tracks)
     {
         "filename": "breakbeat/DJ BABY - JUSTIN BIEBER REMIX TIKTOK BY FEBRY REMIX   DJ TIKTOK TERBARU 2025!!! - DJ AMINZZZ.mp3",
         "title": "Baby - Justin Bieber Remix TikTok",
@@ -32,6 +32,15 @@ window.MUSIC_LIST = [
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 210
+    },
+    {
+        "filename": "breakbeat/BREAKBEAT CONCRETE ANGEL SLOW REVERB 2026 LIRIK CONCRETE ANGEL VIRAL TIKTOK  DJ TELOOR - DJ TELOOR.mp3",
+        "title": "Concrete Angel - Slow Reverb 2026 (Viral TikTok)",
+        "artist": "DJ TELOOR",
+        "album": "TikTok Viral 2026",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 195
     },
     {
         "filename": "breakbeat/Whisnu Santika, hbrp, Keebo - Cartel (Official Music Video) - Whisnu Santika.mp3",
@@ -106,9 +115,6 @@ window.MUSIC_LIST = [
         "duration": 195
     },
     {
-        "filename": "breakbeat/DJ NG
-    },
-    {
         "filename": "breakbeat/DJ NGGA DULU - JANGAN LAGI LAGI KAMU CARI CARI SLOW VIRAL TIKTOK - BORLEN RMX TEAM.mp3",
         "title": "Ngga Dulu - Jangan Lagi Lagi Kamu Cari Cari (Slow Viral TikTok)",
         "artist": "DJ NGGA DULU - BORLEN RMX TEAM",
@@ -116,6 +122,15 @@ window.MUSIC_LIST = [
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 192
+    },
+    {
+        "filename": "breakbeat/DJ SAKTENANE 🔥 KABEH PERJUANGANMU MUNG TAK ANGGEP ANGIN LALU MENGKANE VIRAL TIKTOK TERBARU 2026 - DJ Sahida Fvnky.mp3",
+        "title": "Saktenane - Kabeh Perjuanganmu Mung Tak Anggep Angin Lalu (Viral TikTok 2026)",
+        "artist": "DJ Sahida Fvnky",
+        "album": "TikTok Viral 2026",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 200
     },
     {
         "filename": "breakbeat/DJ KO TOLONG BILANG CINTA KA TIDAK SLOW VIRAL TIKTOK FULL SONG MAMAN FVNDY 2025 - Maman Fvndy Rmx.mp3",
@@ -403,13 +418,13 @@ window.MUSIC_LIST = [
 /**
  * MUSIK SUDAH SIAP!
  * 
- * Total: 43 tracks
- * - Breakbeat: 17 tracks
+ * Total: 45 tracks
+ * - Breakbeat: 19 tracks
  * - For Revenge: 12 tracks
  * - Cigarettes After Sex: 14 tracks
  * 
  * Struktur folder:
- * - assets/music/breakbeat/ (17 tracks)
+ * - assets/music/breakbeat/ (19 tracks)
  * - assets/music/for revenge/ (12 tracks)
  * - assets/music/Cigarettes After Sex/ (14 tracks)
  * 
