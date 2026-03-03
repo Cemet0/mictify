@@ -1,11 +1,11 @@
 /**
  * Daftar musik Mictify
- * Total: 45 tracks (19 Breakbeat + 12 For Revenge + 14 CAS)
+ * Total: 44 tracks (18 Breakbeat + 12 For Revenge + 14 CAS)
  * Updated: 2026-02-23
  */
 
 window.MUSIC_LIST = [
-    // BREAKBEAT TRACKS (19 tracks)
+    // BREAKBEAT TRACKS (18 tracks)
     {
         "filename": "breakbeat/DJ BABY - JUSTIN BIEBER REMIX TIKTOK BY FEBRY REMIX   DJ TIKTOK TERBARU 2025!!! - DJ AMINZZZ.mp3",
         "title": "Baby - Justin Bieber Remix TikTok",
@@ -106,15 +106,6 @@ window.MUSIC_LIST = [
         "duration": 190
     },
     {
-        "filename": "breakbeat/DJ MENERIMA LUKA SLOWED NATASYA SABELLA TREND JEDAG JEDUG TIKTOK  VIRAL TIKTOK DJ TERBARU 2025 - Hasan Fvnky RMX [𝙻𝚅] (1).mp3",
-        "title": "Menerima Luka Slowed - Natasya Sabella",
-        "artist": "Hasan Fvnky RMX",
-        "album": "TikTok Viral 2025",
-        "genre": "Breakbeat",
-        "category": "breakbeat",
-        "duration": 195
-    },
-    {
         "filename": "breakbeat/DJ NGGA DULU - JANGAN LAGI LAGI KAMU CARI CARI SLOW VIRAL TIKTOK - BORLEN RMX TEAM.mp3",
         "title": "Ngga Dulu - Jangan Lagi Lagi Kamu Cari Cari (Slow Viral TikTok)",
         "artist": "DJ NGGA DULU - BORLEN RMX TEAM",
@@ -167,6 +158,15 @@ window.MUSIC_LIST = [
         "genre": "Breakbeat",
         "category": "breakbeat",
         "duration": 215
+    },
+    {
+        "filename": "breakbeat/DJ TREND TANTE HOLIC • TEMAN KU SEMUA PADA JAHAT TANTE VIRAL TIKTOK 2026 !!! - ADIK Fvnky.mp3",
+        "title": "Tante Holic - Teman Ku Semua Pada Jahat Tante (Viral TikTok 2026)",
+        "artist": "ADIK Fvnky",
+        "album": "TikTok Viral 2026",
+        "genre": "Breakbeat",
+        "category": "breakbeat",
+        "duration": 190
     },
     {
         "filename": "breakbeat/Whisnu Santika - Yalla Habibi (Official Music Video) - Whisnu Santika.mp3",
@@ -418,13 +418,13 @@ window.MUSIC_LIST = [
 /**
  * MUSIK SUDAH SIAP!
  * 
- * Total: 45 tracks
- * - Breakbeat: 19 tracks
+ * Total: 44 tracks
+ * - Breakbeat: 18 tracks
  * - For Revenge: 12 tracks
  * - Cigarettes After Sex: 14 tracks
  * 
  * Struktur folder:
- * - assets/music/breakbeat/ (19 tracks)
+ * - assets/music/breakbeat/ (18 tracks)
  * - assets/music/for revenge/ (12 tracks)
  * - assets/music/Cigarettes After Sex/ (14 tracks)
  * 
